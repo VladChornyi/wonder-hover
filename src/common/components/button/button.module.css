@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 30px;
+  border: none;
+  background-color: var(--main-color);
+  color: white;
+  border-radius: 4px;
+  transition-property: background-color opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+.button:hover {
+  background-color: var(--active-color);
+}
+
+.button:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}

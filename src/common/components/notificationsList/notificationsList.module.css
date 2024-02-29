@@ -1,0 +1,29 @@
+.notificationsContainer {
+  width: 300px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: var(--max-height);
+  overflow: auto;
+}
+
+.list__item {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  width: 250px;
+  height: 40px;
+  padding: 4px;
+  background-color: rgb(246, 234, 216);
+  color: rgb(155, 126, 83);
+  border: 1px solid rgb(155, 126, 83);
+  border-radius: 4px;
+}
