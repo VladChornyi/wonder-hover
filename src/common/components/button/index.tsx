@@ -1,5 +1,6 @@
-import React, { FC, ReactNode } from "react";
-import s from "./button.module.css";
+import type { FC, ReactNode } from 'react'
+import React from 'react'
+import s from './button.module.css'
 
 interface IButtonProps {
   onClick: () => void;
@@ -12,5 +13,5 @@ export const Button: FC<IButtonProps> = ({ onClick, children, disabled }) => {
     <button className={s.button} disabled={disabled} onClick={onClick}>
       {children}
     </button>
-  );
-};
+  )
+}

@@ -1,6 +1,7 @@
-import { FC, useEffect, useRef } from "react";
-import s from "./notificationsList.module.css";
-import { useAutoScroll } from "@/common/hooks/useAutoScroll";
+import type { FC} from 'react'
+import { useRef } from 'react'
+import s from './notificationsList.module.css'
+import { useAutoScroll } from '@/common/hooks/useAutoScroll'
 
 interface INotificationsProps {
   notifications: string[];
@@ -9,8 +10,8 @@ interface INotificationsProps {
 export const NotificationsList: FC<INotificationsProps> = ({
   notifications,
 }) => {
-  const listRef = useRef<HTMLUListElement>(null);
-  useAutoScroll(listRef.current ?? listRef.current, notifications.length);
+  const listRef = useRef<HTMLUListElement>(null)
+  useAutoScroll(listRef.current ?? listRef.current, notifications.length)
 
   return (
     <div className={s.notificationsContainer}>
@@ -23,5 +24,5 @@ export const NotificationsList: FC<INotificationsProps> = ({
         ))}
       </ul>
     </div>
-  );
-};
+  )
+}

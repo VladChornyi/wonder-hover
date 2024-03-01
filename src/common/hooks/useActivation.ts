@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 export const useActivation = (initialState: boolean = false) => {
-  const [isActivated, setIsActivated] = useState(initialState);
+  const [isActivated, setIsActivated] = useState(initialState)
 
   const toggleActivated = () => {
-    setIsActivated((prev) => !prev);
-  };
+    setIsActivated((prev) => !prev)
+  }
 
-  return { isActivated, toggleActivated };
-};
+  return { isActivated, toggleActivated }
+}
