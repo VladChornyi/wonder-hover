@@ -1,4 +1,4 @@
-import type { ChangeEvent} from 'react'
+import type { ChangeEvent } from 'react'
 import { useEffect, useState } from 'react'
 import type { IMode } from '../types'
 
@@ -14,17 +14,19 @@ export const useModes = () => {
   useEffect(() => {
     async function getData() {
       try {
-        const res = await fetch(
-          'https://60816d9073292b0017cdd833.mockapi.io/modes'
-        )
+        const res = await fetch('https://60816d9073292b0017cdd833.mockapi.io/modes')
 
         if (!res.ok) {
           throw new Error('Failed to fetch data')
         }
         const data = await res.json()
         setModes(data)
-      } catch {
-        throw new Error('OOOooops')
+      } catch (error) {
+        if (error instanceof Error) {
+          console.error('Error fetching data:', error.message)
+        } else {
+          console.error('Unknown error occurred:', error)
+        }
       }
     }
     getData()
